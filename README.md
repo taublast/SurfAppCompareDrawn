@@ -1,8 +1,10 @@
-# Surfing App - .NET MAUI UI Challenge
+# Surfing App Drawn Comparison
 
-Surfing App UI Challenge made with .NET MAUI.
+Comparison between .NET MAUI CollectionView and DrawnUI alternative.
 
-![Surfing App](images/surfing-maui.png)
+Initial app: https://github.com/jsuarezruiz/netmaui-surfing-app-challenge
+
+The drawn part is NOT using hardware acceleration.
 
 ## Copyright and license
 
