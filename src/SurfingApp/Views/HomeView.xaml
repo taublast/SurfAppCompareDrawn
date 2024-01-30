@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="SurfingApp.Views.HomeView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:templates="clr-namespace:SurfingApp.Views.Templates"
+    xmlns:viewModels="clr-namespace:SurfingApp.ViewModels"
+    x:DataType="viewModels:HomeViewModel"
+    BackgroundColor="White">
+
+    <Grid RowDefinitions="Auto, *">
+
+        <!--  USER LIST  -->
+        <Grid
+            Grid.Row="0"
+            Margin="0,18">
+            <CollectionView ItemsSource="{Binding Users}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout
+                        ItemSpacing="6"
+                        Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <templates:UserItemTemplate />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+        <!--  POST LIST  -->
+        <Grid
+            Grid.Row="1"
+            Padding="24,12,24,0">
+            <CollectionView 
+                ItemsSource="{Binding Posts}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout
+                        ItemSpacing="36"
+                        Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <templates:PostItemTemplate />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </Grid>
+</ContentView>

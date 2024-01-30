@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SurfingApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:SurfingApp.Converters"
+    xmlns:draw="http://schemas.appomobi.com/drawnUi/2023/draw"
+    xmlns:viewModels="clr-namespace:SurfingApp.ViewModels"
+    xmlns:views="clr-namespace:SurfingApp.Views"
+    xmlns:viewsDrawn="clr-namespace:SurfingApp.ViewsDrawn"
+    Title="MainPage"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <viewModels:HomeViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid
+        BackgroundColor="Red"
+        ColumnDefinitions="50*,50*"
+        ColumnSpacing="1"
+        HorizontalOptions="Fill"
+        RowDefinitions="47,*"
+        VerticalOptions="Fill">
+
+        <Label
+            HorizontalOptions="Center"
+            Text="CollectionView"
+            VerticalOptions="Center" />
+        <Label
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            Text="DrawnUI"
+            VerticalOptions="Center" />
+
+        <views:HomeView Grid.Row="1" />
+
+        <draw:Canvas
+            Grid.Row="1"
+            Grid.Column="1"
+            Gestures="Enabled"
+            HardwareAccelerated="False"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+
+            <draw:SkiaLayout
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+
+            <viewsDrawn:HomeView />
+
+            <draw:SkiaLabelFps
+                Margin="0,0,4,24"
+                BackgroundColor="DarkRed"
+                HorizontalOptions="End"
+                Rotation="-45"
+                TextColor="White"
+                VerticalOptions="End"
+                ZIndex="100" />
+
+            </draw:SkiaLayout>
+        </draw:Canvas>
+
+    </Grid>
+
+</ContentPage>

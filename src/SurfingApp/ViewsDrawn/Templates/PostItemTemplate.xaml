@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<draw:SkiaLayout
+    x:Class="SurfingApp.ViewsDrawn.Templates.PostItemTemplate"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:SurfingApp.Converters"
+    xmlns:draw="http://schemas.appomobi.com/drawnUi/2023/draw"
+    xmlns:models="clr-namespace:SurfingApp.Models"
+    UseCache="ImageDoubleBuffered"
+    x:DataType="models:Post">
+
+    <draw:SkiaControl.Resources>
+        <ResourceDictionary>
+
+            <converters:ToUpperConverter x:Key="ToUpperConverter" />
+
+
+            <Style
+                x:Key="PostBorderStyle"
+                TargetType="draw:SkiaShape">
+                <Setter Property="StrokeWidth" Value="0" />
+                <Setter Property="HeightRequest" Value="240" />
+            </Style>
+
+            <Style
+                x:Key="UserBorderStyle"
+                TargetType="draw:SkiaShape">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="StrokeColor" Value="{Binding User.Color}" />
+                <Setter Property="StrokeWidth" Value="2" />
+                <Setter Property="HeightRequest" Value="54" />
+                <Setter Property="WidthRequest" Value="54" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="Margin" Value="12" />
+            </Style>
+
+            <Style
+                x:Key="UserNameStyle"
+                TargetType="draw:SkiaLabel">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style
+                x:Key="CreatedAtStyle"
+                TargetType="draw:SkiaLabel">
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Opacity" Value="0.75" />
+            </Style>
+
+            <Style
+                x:Key="InfoLayoutStyle"
+                TargetType="draw:SkiaLayout">
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+            <Style
+                x:Key="HeartIconStyle"
+                TargetType="draw:SkiaShape">
+                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="16" />
+                <Setter Property="WidthRequest" Value="16" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style
+                x:Key="HeartTextStyle"
+                TargetType="draw:SkiaLabel">
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="2, 0" />
+            </Style>
+
+            <Style
+                x:Key="MarkIconStyle"
+                TargetType="draw:SkiaShape">
+                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="16" />
+                <Setter Property="WidthRequest" Value="8" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style
+                x:Key="PlayBorderStyle"
+                TargetType="draw:SkiaShape">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="StrokeWidth" Value="0" />
+                <Setter Property="HeightRequest" Value="44" />
+                <Setter Property="WidthRequest" Value="44" />
+                <Setter Property="Margin" Value="12" />
+            </Style>
+
+            <Style
+                x:Key="PlayIconStyle"
+                TargetType="draw:SkiaShape">
+                <Setter Property="HeightRequest" Value="16" />
+                <Setter Property="WidthRequest" Value="16" />
+                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style
+                x:Key="TitleTextStyle"
+                TargetType="draw:SkiaLabel">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="MaxLines" Value="2" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="WidthRequest" Value="280" />
+            </Style>
+
+            <Style
+                x:Key="FromTextStyle"
+                TargetType="draw:SkiaLabel">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="LightGray" />
+                <Setter Property="Opacity" Value="0.95" />
+            </Style>
+
+        </ResourceDictionary>
+    </draw:SkiaControl.Resources>
+
+    <draw:SkiaShape
+        CornerRadius="12,12,120,12"
+        HorizontalOptions="Fill"
+        Style="{StaticResource PostBorderStyle}"
+        VerticalOptions="Fill">
+        <draw:SkiaControl.Shadows>
+
+            <draw:SkiaShadow
+                Blur="3"
+                Opacity="0.15"
+                X="1"
+                Y="1"
+                Color="Black" />
+
+        </draw:SkiaControl.Shadows>
+
+        <draw:SkiaLayout
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+
+            <draw:SkiaImage
+                Aspect="AspectCover"
+                Source="{Binding Image}" />
+
+            <draw:SkiaLayout
+                BackgroundColor="Black"
+                HorizontalOptions="Fill"
+                Opacity="0.1"
+                VerticalOptions="Fill" />
+
+            <draw:SkiaLayout
+                ColumnDefinitions="72, Auto"
+                RowDefinitions="Auto, Auto, *"
+                Type="Grid"
+                VerticalOptions="Fill">
+
+                <draw:SkiaLayout HorizontalOptions="Start">
+
+                    <draw:SkiaShape
+                        Style="{StaticResource UserBorderStyle}"
+                        Type="Circle">
+
+                        <draw:SkiaImage
+                            Aspect="AspectCover"
+                            EraseChangedContent="False"
+                            HorizontalOptions="Fill"
+                            Source="{Binding User.Image}"
+                            UseCache="Image"
+                            VerticalOptions="Fill" />
+
+                    </draw:SkiaShape>
+
+                </draw:SkiaLayout>
+
+                <draw:SkiaLayout
+                    Grid.Column="1"
+                    Margin="0,18"
+                    RowDefinitions="Auto, Auto"
+                    Type="Grid">
+
+                    <draw:SkiaLabel
+                        Style="{StaticResource UserNameStyle}"
+                        Text="{Binding User.Name, Converter={StaticResource ToUpperConverter}}"
+                        UseCache="Operations" />
+
+                    <draw:SkiaLabel
+                        Grid.Row="1"
+                        Style="{StaticResource CreatedAtStyle}"
+                        Text="4 HOURS AGO"
+                        UseCache="Operations" />
+
+                </draw:SkiaLayout>
+
+                <draw:SkiaLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Fill"
+                    Spacing="16"
+                    Style="{StaticResource InfoLayoutStyle}"
+                    Type="Column"
+                    UseCache="Operations">
+
+                    <draw:SkiaLayout
+                        HeightRequest="16"
+                        Type="Row">
+
+                        <draw:SkiaShape
+                            BackgroundColor="Black"
+                            PathData="M8.5319849,0C11.560988,7.3866431E-08 14.464015,1.6680007 15.99997,4.5209999 18.139016,0.55099538 22.921994,-1.1230173 27.008008,0.7949839 31.297024,2.8069787 33.185032,8.0069957 31.22604,12.411997 29.27303,16.804 15.998994,30.380001 15.998994,30.380001 15.915985,30.327022 2.7269701,16.804 0.77395964,12.411997 -1.1850933,8.0069957 0.70291448,2.8069787 4.9929701,0.7949839 6.1419612,0.25497467 7.3469826,7.3866431E-08 8.5319849,0z"
+                            Style="{StaticResource HeartIconStyle}"
+                            Type="Path" />
+
+                        <draw:SkiaLabel
+                            Style="{StaticResource HeartTextStyle}"
+                            Text="{Binding Likes}" />
+
+                    </draw:SkiaLayout>
+
+                    <draw:SkiaShape
+                        BackgroundColor="Black"
+                        PathData="M4.2800019,0L11.127999,0C13.491008,0,15.408001,1.9349976,15.408001,4.3209839L15.408001,32 7.5820063,23.104004 0,32 0,4.3209839C2.0228617E-07,1.9349976,1.9169938,0,4.2800019,0z"
+                        Style="{StaticResource MarkIconStyle}"
+                        Type="Path" />
+
+                </draw:SkiaLayout>
+
+                <!--  PLAY + TITLE  -->
+                <draw:SkiaLayout
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    Margin="0,12"
+                    ColumnDefinitions="Auto, *"
+                    HeightRequest="70"
+                    Type="Grid"
+                    UseCache="Operations"
+                    VerticalOptions="End">
+
+                    <draw:SkiaShape
+                        Style="{StaticResource PlayBorderStyle}"
+                        Type="Circle">
+                        <draw:SkiaControl.Shadows>
+
+                            <draw:SkiaShadow
+                                Blur="3"
+                                Opacity="0.33"
+                                X="4"
+                                Y="4"
+                                Color="Black" />
+
+                        </draw:SkiaControl.Shadows>
+
+                        <draw:SkiaShape
+                            PathData="M0,0L15.825011,8.0009766 31.650999,15.997986 15.825011,23.998993 0,32 0,15.997986z"
+                            Style="{StaticResource PlayIconStyle}"
+                            Type="Path" />
+
+                    </draw:SkiaShape>
+
+                    <draw:SkiaLayout
+                        Grid.Column="1"
+                        Type="Column">
+
+                        <draw:SkiaLabel
+                            UseCache="Operations"
+                            DropShadowColor="#33000000"
+                            DropShadowSize="1"
+                            Style="{StaticResource TitleTextStyle}"
+                            Text="{Binding Title}" />
+
+                        <draw:SkiaLabel
+                            UseCache="Operations"
+                            StrokeColor="#33000000"
+                            StrokeWidth="1"
+                            Style="{StaticResource FromTextStyle}"
+                            Text="{Binding User.From, Converter={StaticResource ToUpperConverter}}" />
+
+                    </draw:SkiaLayout>
+
+                </draw:SkiaLayout>
+
+            </draw:SkiaLayout>
+
+        </draw:SkiaLayout>
+
+    </draw:SkiaShape>
+
+</draw:SkiaLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<draw:SkiaLayout
+    x:Class="SurfingApp.ViewsDrawn.HomeView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:SurfingApp.Converters"
+    xmlns:draw="http://schemas.appomobi.com/drawnUi/2023/draw"
+    xmlns:templates="clr-namespace:SurfingApp.Views.Templates"
+    xmlns:templates1="clr-namespace:SurfingApp.ViewsDrawn.Templates"
+    xmlns:viewModels="clr-namespace:SurfingApp.ViewModels"
+    x:DataType="viewModels:HomeViewModel"
+    BackgroundColor="White"
+    RowDefinitions="Auto, *"
+    Type="Grid">
+
+    <!--  USER LIST  -->
+    <draw:SkiaLayout
+        Grid.Row="0"
+        Margin="0,18">
+
+        <draw:SkiaScroll
+            x:Name="LineScroll"
+            HorizontalOptions="Fill"
+            MaxBounceVelocity="300"
+            Orientation="Horizontal">
+
+            <draw:SkiaLayout
+                ItemsSource="{Binding Users}"
+                Spacing="6"
+                Type="Row">
+
+                <draw:SkiaLayout.ItemTemplate>
+                    <DataTemplate>
+                        <templates1:UserItemTemplate />
+                    </DataTemplate>
+                </draw:SkiaLayout.ItemTemplate>
+
+            </draw:SkiaLayout>
+
+        </draw:SkiaScroll>
+
+    </draw:SkiaLayout>
+
+    <!--  POST LIST  -->
+
+    <!--
+        We have tweaked a  HiddenAmountToRender to begin rendering new
+        cells in advance when they are a bit away from the visible area
+        to avoid see unprepared cache
+    -->
+
+    <!--
+        also in a real app we would not use bindings for a recycled cells scroll
+        but we would set in 1 frame all the data from the new binding context in code-behind
+    -->
+
+    <draw:SkiaScroll
+        Grid.Row="1"
+        Margin="0,12,0,0"
+        FrictionScrolled="0.275"
+        MaxBounceVelocity="300">
+
+        <draw:SkiaLayout
+            Margin="24,0,24,0"
+            HiddenAmountToRender="75"
+            ItemsSource="{Binding Posts}"
+            Spacing="36"
+            Type="Column">
+
+            <draw:SkiaLayout.ItemTemplate>
+                <DataTemplate>
+                    <templates1:PostItemTemplate />
+                </DataTemplate>
+            </draw:SkiaLayout.ItemTemplate>
+
+        </draw:SkiaLayout>
+    </draw:SkiaScroll>
+
+</draw:SkiaLayout>

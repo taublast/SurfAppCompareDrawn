@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<draw:SkiaLayout
+    x:Class="SurfingApp.ViewsDrawn.Templates.UserItemTemplate"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:draw="http://schemas.appomobi.com/drawnUi/2023/draw"
+    xmlns:models="clr-namespace:SurfingApp.Models"
+    Style="{StaticResource UserLayoutStyle}"
+    UseCache="ImageDoubleBuffered">
+
+    <draw:SkiaControl.Resources>
+        <ResourceDictionary>
+
+            <Style
+                x:Key="UserLayoutStyle"
+                TargetType="draw:SkiaLayout">
+                <Setter Property="HeightRequest" Value="64" />
+                <Setter Property="WidthRequest" Value="64" />
+            </Style>
+
+            <Style
+                x:Key="UserBorderStyle"
+                TargetType="draw:SkiaShape">
+                <Setter Property="StrokeColor" Value="{Binding Color}" />
+                <Setter Property="StrokeWidth" Value="2" />
+            </Style>
+
+        </ResourceDictionary>
+    </draw:SkiaControl.Resources>
+
+
+    <draw:SkiaShape
+        x:DataType="models:User"
+        Style="{StaticResource UserBorderStyle}"
+        Type="Circle">
+
+        <draw:SkiaImage Source="{Binding Image}" />
+
+    </draw:SkiaShape>
+
+
+</draw:SkiaLayout>
