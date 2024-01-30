@@ -11,7 +11,7 @@ The drawn part is NOT using hardware acceleration, cells are recycled.
 ## TODO
 
 * To fix drawn cells occasional double buffering flickering
-* Maybe add RefreshVire to both versions
+* Maybe add RefreshView to both versions
 
 ## Copyright and license
 
