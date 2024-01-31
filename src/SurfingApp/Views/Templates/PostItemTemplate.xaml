@@ -103,11 +103,11 @@
                 <RoundRectangle
                     CornerRadius="12, 120, 12, 12"/>
             </Border.StrokeShape>
-            <Border.Shadow>
+            <!--<Border.Shadow>
                 <Shadow
                     Opacity="0.15"
                     Offset="1, 1"/>
-            </Border.Shadow>
+            </Border.Shadow>-->
             <Grid>
                 <Image 
                     Aspect="AspectFill"
@@ -183,11 +183,11 @@
                             <Border.StrokeShape>
                                 <Ellipse />
                             </Border.StrokeShape>
-                            <Border.Shadow>
+                            <!--<Border.Shadow>
                                 <Shadow 
                                     Opacity="0.5"
                                     Offset="4, 4"/>
-                            </Border.Shadow>
+                            </Border.Shadow>-->
                             <Path
                                 Data="M0,0L15.825011,8.0009766 31.650999,15.997986 15.825011,23.998993 0,32 0,15.997986z"
                                 Style="{StaticResource PlayIconStyle}"/>
@@ -197,10 +197,10 @@
                             <Label 
                                 Text="{Binding Title}"
                                 Style="{StaticResource TitleTextStyle}">
-                                <Label.Shadow>
+                                <!--<Label.Shadow>
                                     <Shadow 
                                         Opacity="0.5"/>
-                                </Label.Shadow>
+                                </Label.Shadow>-->
                             </Label>
                             <Label 
                                 Text="{Binding User.From, Converter={StaticResource ToUpperConverter}}"

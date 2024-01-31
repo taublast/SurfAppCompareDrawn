@@ -24,10 +24,12 @@
         VerticalOptions="Fill">
 
         <Label
+            FontAttributes="Bold"
             HorizontalOptions="Center"
             Text="CollectionView"
             VerticalOptions="Center" />
         <Label
+            FontAttributes="Bold"
             Grid.Column="1"
             HorizontalOptions="Center"
             Text="DrawnUI"
@@ -39,11 +41,12 @@
             Grid.Row="1"
             Grid.Column="1"
             Gestures="Enabled"
-            HardwareAccelerated="False"
+            HardwareAcceleration="Prerender"
             HorizontalOptions="Fill"
             VerticalOptions="Fill">
 
             <draw:SkiaLayout
+                BackgroundColor="Blue"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill">
 

@@ -16,7 +16,7 @@
     <!--  USER LIST  -->
     <draw:SkiaLayout
         Grid.Row="0"
-        Margin="0,18">
+        Margin="0,16">
 
         <draw:SkiaScroll
             x:Name="LineScroll"
@@ -31,7 +31,7 @@
 
                 <draw:SkiaLayout.ItemTemplate>
                     <DataTemplate>
-                        <templates1:UserItemTemplate />
+                        <templates1:UserItemTemplate Margin="4" />
                     </DataTemplate>
                 </draw:SkiaLayout.ItemTemplate>
 
@@ -61,10 +61,10 @@
         MaxBounceVelocity="300">
 
         <draw:SkiaLayout
-            Margin="24,0,24,0"
-            HiddenAmountToRender="75"
+            Margin="24,0,14,0"
+            HiddenAmountToRender="50"
             ItemsSource="{Binding Posts}"
-            Spacing="36"
+            Spacing="26"
             Type="Column">
 
             <draw:SkiaLayout.ItemTemplate>

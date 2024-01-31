@@ -6,8 +6,12 @@
     xmlns:converters="clr-namespace:SurfingApp.Converters"
     xmlns:draw="http://schemas.appomobi.com/drawnUi/2023/draw"
     xmlns:models="clr-namespace:SurfingApp.Models"
-    UseCache="ImageDoubleBuffered"
-    x:DataType="models:Post">
+    Padding="0,0,10,10"
+    x:DataType="models:Post"
+    BackgroundColor="Transparent"
+    UseCache="ImageDoubleBuffered">
+
+    <!--we use padding to store shadows in cache-->
 
     <draw:SkiaControl.Resources>
         <ResourceDictionary>
@@ -18,6 +22,7 @@
             <Style
                 x:Key="PostBorderStyle"
                 TargetType="draw:SkiaShape">
+                <Setter Property="BackgroundColor" Value="{StaticResource Gray400}" />
                 <Setter Property="StrokeWidth" Value="0" />
                 <Setter Property="HeightRequest" Value="240" />
             </Style>
@@ -129,6 +134,7 @@
     <draw:SkiaShape
         CornerRadius="12,12,120,12"
         HorizontalOptions="Fill"
+        IsClippedToBounds="False"
         Style="{StaticResource PostBorderStyle}"
         VerticalOptions="Fill">
         <draw:SkiaControl.Shadows>
@@ -136,8 +142,8 @@
             <draw:SkiaShadow
                 Blur="3"
                 Opacity="0.15"
-                X="1"
-                Y="1"
+                X="3"
+                Y="3"
                 Color="Black" />
 
         </draw:SkiaControl.Shadows>
@@ -268,18 +274,18 @@
                         Type="Column">
 
                         <draw:SkiaLabel
-                            UseCache="Operations"
                             DropShadowColor="#33000000"
                             DropShadowSize="1"
                             Style="{StaticResource TitleTextStyle}"
-                            Text="{Binding Title}" />
+                            Text="{Binding Title}"
+                            UseCache="Operations" />
 
                         <draw:SkiaLabel
-                            UseCache="Operations"
                             StrokeColor="#33000000"
                             StrokeWidth="1"
                             Style="{StaticResource FromTextStyle}"
-                            Text="{Binding User.From, Converter={StaticResource ToUpperConverter}}" />
+                            Text="{Binding User.From, Converter={StaticResource ToUpperConverter}}"
+                            UseCache="Operations" />
 
                     </draw:SkiaLayout>
 

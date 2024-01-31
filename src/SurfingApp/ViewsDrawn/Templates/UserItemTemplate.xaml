@@ -14,8 +14,8 @@
             <Style
                 x:Key="UserLayoutStyle"
                 TargetType="draw:SkiaLayout">
-                <Setter Property="HeightRequest" Value="64" />
-                <Setter Property="WidthRequest" Value="64" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="WidthRequest" Value="60" />
             </Style>
 
             <Style
