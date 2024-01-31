@@ -1,4 +1,4 @@
-# Surfing App Drawn Comparison
+# Surfing App MAUI/Drawn Etude
 
 Performance comparison between [.NET MAUI CollectionView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/collectionview) and [DrawnUI](https://github.com/taublast/AppoMobi.Maui.DrawnUi.Demo) alternative.
 
@@ -10,7 +10,7 @@ https://github.com/taublast/SurfAppCompareDrawn/assets/25801194/3fa08b5c-746a-47
 
 ## To Note 
 
-Both CollectionView and DrawnUI cells are recycled. MAUI CollectionView does not use shadows, DrawnUI does for fun.
+Both CollectionView and DrawnUI cells are recycled. MAUI CollectionView does not use shadows, DrawnUI does.
 
 ## Copyright and license
 
