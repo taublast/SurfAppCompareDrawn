@@ -1,6 +1,6 @@
 # Surfing App MAUI/Drawn
 
-Performance comparison between [.NET MAUI CollectionView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/collectionview) and [DrawnUI](https://github.com/taublast/AppoMobi.Maui.DrawnUi.Demo) alternative.
+Performance comparison between [.NET MAUI CollectionView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/collectionview) and its [DrawnUI](https://github.com/taublast/AppoMobi.Maui.DrawnUi.Demo) alternative.
 
 ## Implementation
 
