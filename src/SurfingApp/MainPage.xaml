@@ -24,11 +24,14 @@
         VerticalOptions="Fill">
 
         <Label
+            TextColor="White"
             FontAttributes="Bold"
             HorizontalOptions="Center"
             Text="CollectionView"
             VerticalOptions="Center" />
+
         <Label
+            TextColor="White"
             FontAttributes="Bold"
             Grid.Column="1"
             HorizontalOptions="Center"

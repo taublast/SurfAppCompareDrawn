@@ -21,7 +21,9 @@
         <draw:SkiaScroll
             x:Name="LineScroll"
             HorizontalOptions="Fill"
-            MaxBounceVelocity="300"
+            MaxBounceVelocity="400"
+            ChangeVelocityPanned="1.75"
+            FrictionScrolled="0.66"
             Orientation="Horizontal">
 
             <draw:SkiaLayout
@@ -57,12 +59,13 @@
     <draw:SkiaScroll
         Grid.Row="1"
         Margin="0,12,0,0"
-        FrictionScrolled="0.275"
-        MaxBounceVelocity="300">
+            MaxBounceVelocity="400"
+            ChangeVelocityPanned="1.75"
+            FrictionScrolled="0.4">
 
         <draw:SkiaLayout
             Margin="24,0,14,0"
-            HiddenAmountToRender="50"
+            HiddenAmountToRender="80"
             ItemsSource="{Binding Posts}"
             Spacing="26"
             Type="Column">
