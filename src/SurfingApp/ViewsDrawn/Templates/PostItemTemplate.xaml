@@ -9,6 +9,7 @@
     Padding="0,0,10,10"
     x:DataType="models:Post"
     BackgroundColor="Transparent"
+    draw:AddGestures.AnimationTapped="Ripple"
     UseCache="ImageDoubleBuffered">
 
     <!--we use padding to store shadows in cache-->

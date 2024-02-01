@@ -6,6 +6,7 @@
     xmlns:draw="http://schemas.appomobi.com/drawnUi/2023/draw"
     xmlns:models="clr-namespace:SurfingApp.Models"
     Style="{StaticResource UserLayoutStyle}"
+    draw:AddGestures.AnimationTapped="Ripple"
     UseCache="ImageDoubleBuffered">
 
     <draw:SkiaControl.Resources>
