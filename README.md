@@ -5,9 +5,12 @@ Performance comparison between a [CollectionView](https://learn.microsoft.com/en
 ## Implementation
 
 Created a copy of Xaml views of an [original Surfing App](https://github.com/jsuarezruiz/netmaui-surfing-app-challenge) and converted them to be drawn on a skia canvas.  
-All cells are recycled.
 
 https://github.com/taublast/SurfAppCompareDrawn/assets/25801194/3fa08b5c-746a-4720-b2ac-b5f0c5af4799
+
+## To Note
+
+Cells are recycled. MAUI CollectionView is not using shadows here, DrawnUI does.
 
 ## Copyright and license
 
