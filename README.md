@@ -10,7 +10,7 @@ https://github.com/taublast/SurfAppCompareDrawn/assets/25801194/3fa08b5c-746a-47
 
 ## To Note
 
-Cells are recycled. MAUI CollectionView is not using shadows here, DrawnUI does.
+Cells are recycled. CollectionView is not using shadows here, DrawnUI does.
 
 ## Copyright and license
 
