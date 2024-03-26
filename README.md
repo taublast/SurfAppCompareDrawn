@@ -12,6 +12,11 @@ https://github.com/taublast/SurfAppCompareDrawn/assets/25801194/3fa08b5c-746a-47
 
 Cells are recycled. CollectionView runs with shadows off.
 
+## _What's New_
+
+* NET 8
+* New SkiaSharp3 preview nuget enabled hardware-acceleration for Windows, MacCatalyst and [other features and fixes](https://github.com/taublast/DrawnUi.Maui). 
+
 ## Copyright and license
 
 Code released under the [MIT license](https://opensource.org/licenses/MIT).
