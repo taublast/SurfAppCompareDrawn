@@ -22,7 +22,7 @@
             x:Name="LineScroll"
             HorizontalOptions="Fill"
             MaxBounceVelocity="400"
-            FrictionScrolled="0.66"
+            FrictionScrolled="0.3"
             Orientation="Horizontal">
 
             <draw:SkiaLayout

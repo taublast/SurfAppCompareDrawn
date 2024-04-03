@@ -177,7 +177,6 @@
 
                         <draw:SkiaImage
                             Aspect="AspectCover"
-                            EraseChangedContent="False"
                             HorizontalOptions="Fill"
                             Source="{Binding User.Image}"
                             UseCache="Image"
