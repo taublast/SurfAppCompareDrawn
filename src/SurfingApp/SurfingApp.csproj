@@ -81,7 +81,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AppoMobi.Maui.DrawnUi" Version="1.2.0.84" /> 
+		<PackageReference Include="AppoMobi.Maui.DrawnUi" Version="1.2.0.86" /> 
 	</ItemGroup>
 	 
 

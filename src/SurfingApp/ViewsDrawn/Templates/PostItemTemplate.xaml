@@ -158,12 +158,14 @@
                 Source="{Binding Image}" />
 
             <draw:SkiaLayout
+                UseCache="Operations"
                 BackgroundColor="Black"
                 HorizontalOptions="Fill"
                 Opacity="0.1"
                 VerticalOptions="Fill" />
 
             <draw:SkiaLayout
+                UseCache="Image"
                 ColumnDefinitions="72, Auto"
                 RowDefinitions="Auto, Auto, *"
                 Type="Grid"
@@ -179,7 +181,6 @@
                             Aspect="AspectCover"
                             HorizontalOptions="Fill"
                             Source="{Binding User.Image}"
-                            UseCache="Image"
                             VerticalOptions="Fill" />
 
                     </draw:SkiaShape>

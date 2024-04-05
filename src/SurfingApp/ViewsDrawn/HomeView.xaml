@@ -26,6 +26,7 @@
             Orientation="Horizontal">
 
             <draw:SkiaLayout
+                HiddenAmountToRender="100"
                 ItemsSource="{Binding Users}"
                 Spacing="6"
                 Type="Row">
@@ -63,7 +64,7 @@
 
         <draw:SkiaLayout
             Margin="24,0,14,0"
-            HiddenAmountToRender="80"
+            HiddenAmountToRender="100"
             ItemsSource="{Binding Posts}"
             Spacing="26"
             Type="Column">
