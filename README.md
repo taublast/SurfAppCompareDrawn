@@ -1,6 +1,6 @@
 # Comparing Native vs Drawn
 
-Performance comparison between a [CollectionView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/collectionview) and [DrawnUI](https://github.com/taublast/AppoMobi.Maui.DrawnUi.Demo) for .NET MAUI.
+Performance comparison between a [CollectionView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/collectionview) and [DrawnUI](https://github.com/taublast/DrawnUi.Maui) for .NET MAUI.
 
 ## Implementation
 
@@ -10,7 +10,7 @@ https://github.com/taublast/SurfAppCompareDrawn/assets/25801194/3fa08b5c-746a-47
 
 ## Setup
 
-MAUI CollectionView competes with shadows Off.
+MAUI CollectionView competes with shadows Off.  
 DrawnUI cells are recycled, GPU-acceleration is off, shadows On.
 
 ## Copyright and license
