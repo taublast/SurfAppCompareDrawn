@@ -46,7 +46,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-    
+
 	  <None Remove="Resources\Images\post01.jpg" />
 	  <None Remove="Resources\Images\post02.jpg" />
 	  <None Remove="Resources\Images\post03.jpg" />
@@ -78,8 +78,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AppoMobi.Maui.DrawnUi" Version="1.2.3.2" /> 
-	</ItemGroup>
+ 
+		<PackageReference Include="AppoMobi.Maui.DrawnUi" Version="1.2.3.2" />
+ 	</ItemGroup>
 
 
 </Project>
