@@ -7,12 +7,12 @@
     xmlns:draw="http://schemas.appomobi.com/drawnUi/2023/draw"
     xmlns:models="clr-namespace:SurfingApp.Models"
     Padding="0,0,10,10"
+    draw:AddGestures.AnimationTapped="Ripple"
     x:DataType="models:Post"
     BackgroundColor="Transparent"
-    draw:AddGestures.AnimationTapped="Ripple"
     UseCache="ImageDoubleBuffered">
 
-    <!--we use padding to store shadows in cache-->
+    <!--  we use padding to store shadows in cache  -->
 
     <draw:SkiaControl.Resources>
         <ResourceDictionary>
@@ -133,7 +133,7 @@
     </draw:SkiaControl.Resources>
 
     <draw:SkiaShape
-        CornerRadius="12,12,120,12"
+        CornerRadius="12, 120, 12, 12"
         HorizontalOptions="Fill"
         IsClippedToBounds="False"
         Style="{StaticResource PostBorderStyle}"
@@ -154,21 +154,22 @@
             VerticalOptions="Fill">
 
             <draw:SkiaImage
+                EraseChangedContent="False"
                 Aspect="AspectCover"
+                RescalingQuality="None"
                 Source="{Binding Image}" />
 
             <draw:SkiaLayout
-                UseCache="Operations"
                 BackgroundColor="Black"
                 HorizontalOptions="Fill"
                 Opacity="0.1"
                 VerticalOptions="Fill" />
 
             <draw:SkiaLayout
-                UseCache="Image"
                 ColumnDefinitions="72, Auto"
                 RowDefinitions="Auto, Auto, *"
                 Type="Grid"
+                UseCache="Operations"
                 VerticalOptions="Fill">
 
                 <draw:SkiaLayout HorizontalOptions="Start">
@@ -180,6 +181,7 @@
                         <draw:SkiaImage
                             Aspect="AspectCover"
                             HorizontalOptions="Fill"
+                            RescalingQuality="None"
                             Source="{Binding User.Image}"
                             VerticalOptions="Fill" />
 

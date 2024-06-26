@@ -20,13 +20,13 @@
 
         <draw:SkiaScroll
             x:Name="LineScroll"
+            FrictionScrolled="0.3"
             HorizontalOptions="Fill"
             MaxBounceVelocity="400"
-            FrictionScrolled="0.3"
             Orientation="Horizontal">
 
             <draw:SkiaLayout
-                HiddenAmountToRender="100"
+                InitializeTemplatesInBackgroundDelay="30"
                 ItemsSource="{Binding Users}"
                 Spacing="6"
                 Type="Row">
@@ -54,19 +54,25 @@
     <!--
         also in a real app we would not use bindings for a recycled cells scroll
         but we would set in 1 frame all the data from the new binding context in code-behind
+        like here: https://github.com/taublast/DrawnUi.Maui.Demo/blob/c1f590cb0cc486fb2e0a5bfe8532a677991a60fc/src/AllDrawn/Views/Content/TabHome.xaml#L410
     -->
 
     <draw:SkiaScroll
         Grid.Row="1"
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill"
         Margin="0,12,0,0"
-            MaxBounceVelocity="400"
-            FrictionScrolled="0.4">
+        FrictionScrolled="0.4"
+        MaxBounceVelocity="400">
 
         <draw:SkiaLayout
+            HorizontalOptions="Fill"
+            Tag="Posts"
             Margin="24,0,14,0"
             HiddenAmountToRender="100"
             ItemsSource="{Binding Posts}"
             Spacing="26"
+            InitializeTemplatesInBackgroundDelay="10"
             Type="Column">
 
             <draw:SkiaLayout.ItemTemplate>

@@ -8,9 +8,10 @@ Converted a copy of XAML views of an original [Surfing App](https://github.com/j
 
 https://github.com/taublast/SurfAppCompareDrawn/assets/25801194/3fa08b5c-746a-4720-b2ac-b5f0c5af4799
 
-## To Note
+## Setup
 
-Cells are recycled. CollectionView runs with shadows off.
+MAUI CollectionView competes with shadows Off.
+DrawnUI cells are recycled, GPU-acceleration is off, shadows On.
 
 ## Copyright and license
 

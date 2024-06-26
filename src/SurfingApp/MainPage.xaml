@@ -24,18 +24,18 @@
         VerticalOptions="Fill">
 
         <Label
-            TextColor="White"
             FontAttributes="Bold"
             HorizontalOptions="Center"
             Text="CollectionView"
+            TextColor="White"
             VerticalOptions="Center" />
 
         <Label
-            TextColor="White"
-            FontAttributes="Bold"
             Grid.Column="1"
+            FontAttributes="Bold"
             HorizontalOptions="Center"
             Text="DrawnUI"
+            TextColor="White"
             VerticalOptions="Center" />
 
         <views:HomeView Grid.Row="1" />
@@ -44,7 +44,7 @@
             Grid.Row="1"
             Grid.Column="1"
             Gestures="Enabled"
-            HardwareAcceleration="Prerender"
+            HardwareAcceleration="Disabled"
             HorizontalOptions="Fill"
             VerticalOptions="Fill">
 
@@ -53,16 +53,16 @@
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill">
 
-            <viewsDrawn:HomeView />
+                <viewsDrawn:HomeView />
 
-            <draw:SkiaLabelFps
-                Margin="0,0,4,24"
-                BackgroundColor="DarkRed"
-                HorizontalOptions="End"
-                Rotation="-45"
-                TextColor="White"
-                VerticalOptions="End"
-                ZIndex="100" />
+                <draw:SkiaLabelFps
+                    Margin="0,0,4,24"
+                    BackgroundColor="DarkRed"
+                    HorizontalOptions="End"
+                    Rotation="-45"
+                    TextColor="White"
+                    VerticalOptions="End"
+                    ZIndex="100" />
 
             </draw:SkiaLayout>
         </draw:Canvas>

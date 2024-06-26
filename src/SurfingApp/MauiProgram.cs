@@ -25,6 +25,10 @@ public static class MauiProgram
             }
         });
 
+        SkiaImageManager.ReuseBitmaps = true;
+
+        //ViewsAdapter.LogEnabled = true;
+
         return builder.Build();
     }
 }
