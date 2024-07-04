@@ -9,10 +9,11 @@
     Padding="0,0,10,10"
     draw:AddGestures.AnimationTapped="Ripple"
     x:DataType="models:Post"
-    BackgroundColor="Transparent"
-    UseCache="ImageDoubleBuffered">
+    BackgroundColor="Transparent">
 
     <!--  we use padding to store shadows in cache  -->
+    
+    <!--notice that Ripple effect is above our cache-->
 
     <draw:SkiaControl.Resources>
         <ResourceDictionary>
@@ -137,6 +138,7 @@
         HorizontalOptions="Fill"
         IsClippedToBounds="False"
         Style="{StaticResource PostBorderStyle}"
+        UseCache="ImageDoubleBuffered"
         VerticalOptions="Fill">
         <draw:SkiaShape.Shadows>
 
@@ -154,8 +156,8 @@
             VerticalOptions="Fill">
 
             <draw:SkiaImage
-                EraseChangedContent="False"
                 Aspect="AspectCover"
+                EraseChangedContent="False"
                 RescalingQuality="None"
                 Source="{Binding Image}" />
 
