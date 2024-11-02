@@ -11,6 +11,7 @@
     x:DataType="viewModels:HomeViewModel"
     BackgroundColor="White"
     RowDefinitions="Auto, *"
+    Tag="HomeView"
     Type="Grid">
 
     <!--  USER LIST  -->
@@ -26,6 +27,7 @@
             Orientation="Horizontal">
 
             <draw:SkiaLayout
+                Tag="Users"
                 InitializeTemplatesInBackgroundDelay="30"
                 ItemsSource="{Binding Users}"
                 Spacing="6"
@@ -69,7 +71,7 @@
             HorizontalOptions="Fill"
             Tag="Posts"
             Margin="24,0,14,0"
-            HiddenAmountToRender="100"
+            VirtualisationInflated="100"
             ItemsSource="{Binding Posts}"
             Spacing="26"
             InitializeTemplatesInBackgroundDelay="10"

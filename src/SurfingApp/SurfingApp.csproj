@@ -77,9 +77,12 @@
 	  <None Remove="Resources\Raw\user06.jpg" />
 	</ItemGroup>
 
-	<ItemGroup>
- 
-		<PackageReference Include="AppoMobi.Maui.DrawnUi" Version="1.2.3.6" />
+	<!--<ItemGroup>
+	  <ProjectReference Include="..\..\..\DrawnUi.Maui\src\Engine\DrawnUi.Maui.csproj" />
+	</ItemGroup>-->
+
+	<ItemGroup> 
+		<PackageReference Include="AppoMobi.Maui.DrawnUi" Version="1.2.4.7" />
  	</ItemGroup>
 
 

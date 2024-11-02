@@ -9,6 +9,7 @@
     Padding="0,0,10,10"
     draw:AddGestures.AnimationTapped="Ripple"
     x:DataType="models:Post"
+    UseCache="ImageDoubleBuffered"
     BackgroundColor="Transparent">
 
     <!--  we use padding to store shadows in cache  -->
@@ -119,7 +120,6 @@
                 <Setter Property="LineBreakMode" Value="WordWrap" />
                 <Setter Property="MaxLines" Value="2" />
                 <Setter Property="HorizontalOptions" Value="Start" />
-                <Setter Property="WidthRequest" Value="280" />
             </Style>
 
             <Style
@@ -138,7 +138,7 @@
         HorizontalOptions="Fill"
         IsClippedToBounds="False"
         Style="{StaticResource PostBorderStyle}"
-        UseCache="ImageDoubleBuffered"
+
         VerticalOptions="Fill">
         <draw:SkiaShape.Shadows>
 
